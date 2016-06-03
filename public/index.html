@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<title>this is title</title>
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap-theme.css">
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css">
+		<script src="libs/angular/angular.js"></script>
+		<script src="controllers.js"></script>
+
+		
+	</head>
+	<body  ng-controller="AppCtrl">
+		<div class="container">
+			<h1>this is body</h1>
+			<table class="table">	
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Phone Number</th>
+						<th>Action</th>
+					</tr>
+					<tr>
+						<th><input class="form-control" ng-model="c.name"></th>
+						<th><input class="form-control" ng-model="c.email"></th>
+						<th><input class="form-control" ng-model="c.number"></th>
+						<th><button class="btn btn-primary" ng-click="addUser()">Add User</button></th>
+						<th><button class="btn btn-info" ng-click="update()">Update</button></th>
+						<th><button class="btn btn-info" ng-click="clean()">Clean</button></th>
+
+					
+
+
+					</tr>
+					<tr ng-repeat="c in contactlist">
+						<td>{{c.name}}</td>
+						<td>{{c.email}}</td>
+						<td>{{c.number}}</td>	
+						<td><button class="btn btn-danger" ng-click="remove(c._id)">Remove</td>	
+						<td><button class="btn btn-warning" ng-click="edit(c._id)">Edit</td>		
+
+	
+					</tr>
+			</table>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "sianchenp",
+  "version": "1.0.0",
+  "description": "this is the practice of restful webserver",
+  "main": "index.html",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "mongo": "^0.1.0",
+    "mongodb": "^2.1.20",
+    "mongojs": "^2.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test command is what/",
+    "start": "node server.js"
+  },
+  "author": "Olivia",
+  "license": "ISC"
+}
